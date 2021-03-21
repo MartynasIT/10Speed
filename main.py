@@ -1,7 +1,6 @@
 import file_worker as file
 import csv_manipulator as manipulator
 
-# data = pd.read_csv("d.csv", error_bad_lines=False, low_memory=False)
 
 if __name__ == '__main__':
     data = file.read_csv('transactions.csv')
