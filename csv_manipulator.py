@@ -18,7 +18,7 @@ def convert_from_datetime_to_unix(date):
         return date
 
 
-def convert_from_datetime_unix_iso(date):
+def convert_from_date_to_iso(date):
     try:
         date_obj = datetime.strptime(date, '%m/%d/%Y')
         return date_obj.isoformat()
