@@ -8,9 +8,9 @@ if __name__ == '__main__':
     data['ReportFiledDate'] = [(lambda x: manipulator.convert_from_datetime_to_unix(x))(x)
                                for x in data['ReportFiledDate']]
     print('To unix completed')
-    data['PeriodBegining'] = [(lambda x: manipulator.convert_from_datetime_unix_iso(x))(x)
+    data['PeriodBegining'] = [(lambda x: manipulator.convert_from_date_to_iso(x))(x)
                               for x in data['PeriodBegining']]
-    data['PeriodEnding'] = [(lambda x: manipulator.convert_from_datetime_unix_iso(x))(x)
+    data['PeriodEnding'] = [(lambda x: manipulator.convert_from_date_to_iso(x))(x)
                             for x in data['PeriodEnding']]
     print('To ISO completed')
     data = manipulator.concat_fields(data, 'CandidateFullName', 'CandidateFirstName', 'CandidateLastName')
